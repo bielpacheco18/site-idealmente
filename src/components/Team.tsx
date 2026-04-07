@@ -1,63 +1,73 @@
-import { Linkedin, Mail } from 'lucide-react'
+import { Instagram, Mail } from 'lucide-react'
 
 const team = [
   {
-    name: 'Dra. Mariana Fonseca',
+    name: 'Gabriela Alves Barcelos',
     role: 'Psicóloga Clínica',
-    crp: 'CRP 06/123456',
-    specialty: 'Terapia Cognitivo-Comportamental',
-    bio: 'Especialista em ansiedade, depressão e transtornos de humor. Mestre em Psicologia Clínica pela USP. Atende adultos e adolescentes com abordagem baseada em evidências.',
-    initials: 'MF',
+    crp: 'CRP 06/225881',
+    specialty: 'Abordagem Centrada na Pessoa',
+    bio: 'Graduada pelo IBMR, com formação sólida na ACP e Pós-graduanda em Psicologia Clínica. Atua em atendimentos individuais, grupos e plantão psicológico. Integra núcleos de pesquisa em Psicopatologia, Saúde Mental e Perdas e Lutos.',
+    photo: '/gabriela.jpeg',
+    initials: 'GA',
     gradient: 'linear-gradient(135deg, #1a3a5c 0%, #2e9cca 100%)',
-    tags: ['TCC', 'Ansiedade', 'Depressão'],
+    tags: ['ACP', 'Luto', 'Plantão Psicológico'],
+    instagram: 'https://instagram.com/galvespsi',
   },
   {
-    name: 'Dr. Rafael Monteiro',
-    role: 'Psiquiatra',
-    crp: 'CRM 12/654321',
-    specialty: 'Psiquiatria do Adulto e Infantil',
-    bio: 'Médico psiquiatra com residência na UNIFESP. Especializado em transtornos do humor, TDAH e acompanhamento farmacológico. Experiência de 10 anos na área.',
-    initials: 'RM',
-    gradient: 'linear-gradient(135deg, #0d1b2a 0%, #1a3a5c 100%)',
-    tags: ['TDAH', 'Farmacologia', 'Transtorno Bipolar'],
-  },
-  {
-    name: 'Dra. Camila Vieira',
-    role: 'Neuropsicóloga',
-    crp: 'CRP 06/789012',
-    specialty: 'Avaliação e Reabilitação Neuropsicológica',
-    bio: 'Especialista em avaliação neuropsicológica para TEA, TDAH, dislexia e sequelas neurológicas. Doutoranda em Neurociências pela UNICAMP.',
-    initials: 'CV',
+    name: 'Fabiana Elias',
+    role: 'Psicóloga Clínica',
+    crp: '',
+    specialty: 'TCC e Psicopatologia',
+    bio: 'Formada pela UNESA, com formação em TCC e Psicopatologia. Experiência em atendimento individual, grupos, saúde mental, crises, urgência e dependência química. Atendimento marcado pela empatia e atenção na escuta.',
+    photo: '/fabiana.jpeg',
+    initials: 'FE',
     gradient: 'linear-gradient(135deg, #2e9cca 0%, #5bc4e8 100%)',
-    tags: ['TEA', 'Avaliação', 'Reabilitação'],
+    tags: ['TCC', 'Dependência Química', 'Urgência'],
   },
   {
-    name: 'Dra. Beatriz Santos',
-    role: 'Terapeuta Ocupacional',
-    crp: 'CREFITO 3/234567-TO',
-    specialty: 'Desenvolvimento Infantil e Integração Sensorial',
-    bio: 'Especialista em desenvolvimento infantil, integração sensorial e inclusão escolar. Atende crianças e adolescentes com atrasos globais e transtornos do neurodesenvolvimento.',
-    initials: 'BS',
+    name: 'Larissa Vieira Leal',
+    role: 'Psicóloga Clínica',
+    crp: 'CRP 05/86385',
+    specialty: 'Terapia Cognitivo-Comportamental',
+    bio: 'Graduada pela Universidade Veiga de Almeida. Atua com TCC em atendimentos individuais focados em ansiedade, burnout, autoestima e relacionamentos. Oferece escuta acolhedora e estratégias práticas respeitando a individualidade de cada paciente.',
+    photo: '/larissa.jpeg',
+    initials: 'LL',
     gradient: 'linear-gradient(135deg, #1a3a5c 0%, #5bc4e8 100%)',
-    tags: ['Infantil', 'Sensorial', 'Inclusão'],
+    tags: ['TCC', 'Ansiedade', 'Burnout'],
+    instagram: 'https://instagram.com/psilarissaleal_',
   },
 ]
 
-const AvatarPlaceholder = ({
+const Avatar = ({
+  photo,
   initials,
   gradient,
+  name,
 }: {
+  photo?: string
   initials: string
   gradient: string
-}) => (
-  <div
-    className="w-24 h-24 rounded-2xl flex items-center justify-center text-white text-2xl font-bold flex-shrink-0 shadow-lg"
-    style={{ background: gradient }}
-    aria-label={`Avatar de ${initials}`}
-  >
-    {initials}
-  </div>
-)
+  name: string
+}) => {
+  if (photo) {
+    return (
+      <img
+        src={photo}
+        alt={name}
+        className="w-24 h-24 rounded-2xl object-cover flex-shrink-0 shadow-lg"
+      />
+    )
+  }
+  return (
+    <div
+      className="w-24 h-24 rounded-2xl flex items-center justify-center text-white text-2xl font-bold flex-shrink-0 shadow-lg"
+      style={{ background: gradient }}
+      aria-label={`Avatar de ${initials}`}
+    >
+      {initials}
+    </div>
+  )
+}
 
 export default function Team() {
   return (
@@ -100,7 +110,12 @@ export default function Team() {
 
               <div className="p-6">
                 <div className="flex items-start justify-between mb-5">
-                  <AvatarPlaceholder initials={member.initials} gradient={member.gradient} />
+                  <Avatar
+                    photo={member.photo}
+                    initials={member.initials}
+                    gradient={member.gradient}
+                    name={member.name}
+                  />
                   <div className="flex gap-2 mt-1">
                     <button
                       className="w-8 h-8 rounded-lg flex items-center justify-center transition-all duration-200 hover:scale-110"
@@ -112,16 +127,21 @@ export default function Team() {
                     >
                       <Mail size={14} />
                     </button>
-                    <button
-                      className="w-8 h-8 rounded-lg flex items-center justify-center transition-all duration-200 hover:scale-110"
-                      style={{
-                        backgroundColor: 'rgba(26, 58, 92, 0.1)',
-                        color: '#1a3a5c',
-                      }}
-                      aria-label={`LinkedIn de ${member.name}`}
-                    >
-                      <Linkedin size={14} />
-                    </button>
+                    {member.instagram && (
+                      <a
+                        href={member.instagram}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="w-8 h-8 rounded-lg flex items-center justify-center transition-all duration-200 hover:scale-110"
+                        style={{
+                          backgroundColor: 'rgba(26, 58, 92, 0.1)',
+                          color: '#1a3a5c',
+                        }}
+                        aria-label={`Instagram de ${member.name}`}
+                      >
+                        <Instagram size={14} />
+                      </a>
+                    )}
                   </div>
                 </div>
 
@@ -131,9 +151,11 @@ export default function Team() {
                 <p className="text-sm font-semibold mb-1" style={{ color: '#2e9cca' }}>
                   {member.role}
                 </p>
-                <p className="text-xs mb-1" style={{ color: '#718096' }}>
-                  {member.crp}
-                </p>
+                {member.crp && (
+                  <p className="text-xs mb-1" style={{ color: '#718096' }}>
+                    {member.crp}
+                  </p>
+                )}
                 <p className="text-xs font-medium mb-3" style={{ color: '#4a5568' }}>
                   {member.specialty}
                 </p>
