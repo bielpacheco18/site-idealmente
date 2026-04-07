@@ -67,7 +67,6 @@ export default function Team() {
       style={{ backgroundColor: '#f8fafc' }}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
         <div className="text-center max-w-2xl mx-auto mb-16 reveal">
           <span
             className="inline-block text-sm font-semibold tracking-widest uppercase mb-4"
@@ -87,7 +86,6 @@ export default function Team() {
           </p>
         </div>
 
-        {/* Team grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6 lg:gap-8">
           {team.map((member, i) => (
             <div
@@ -98,19 +96,11 @@ export default function Team() {
                 transitionDelay: `${i * 0.12}s`,
               }}
             >
-              {/* Card top accent */}
-              <div
-                className="h-1.5 w-full"
-                style={{ background: member.gradient }}
-              />
+              <div className="h-1.5 w-full" style={{ background: member.gradient }} />
 
               <div className="p-6">
-                {/* Avatar + contact */}
                 <div className="flex items-start justify-between mb-5">
-                  <AvatarPlaceholder
-                    initials={member.initials}
-                    gradient={member.gradient}
-                  />
+                  <AvatarPlaceholder initials={member.initials} gradient={member.gradient} />
                   <div className="flex gap-2 mt-1">
                     <button
                       className="w-8 h-8 rounded-lg flex items-center justify-center transition-all duration-200 hover:scale-110"
@@ -135,38 +125,23 @@ export default function Team() {
                   </div>
                 </div>
 
-                {/* Info */}
-                <h3
-                  className="text-base font-bold leading-tight mb-0.5"
-                  style={{ color: '#0d1b2a' }}
-                >
+                <h3 className="text-base font-bold leading-tight mb-0.5" style={{ color: '#0d1b2a' }}>
                   {member.name}
                 </h3>
-                <p
-                  className="text-sm font-semibold mb-1"
-                  style={{ color: '#2e9cca' }}
-                >
+                <p className="text-sm font-semibold mb-1" style={{ color: '#2e9cca' }}>
                   {member.role}
                 </p>
                 <p className="text-xs mb-1" style={{ color: '#718096' }}>
                   {member.crp}
                 </p>
-                <p
-                  className="text-xs font-medium mb-3"
-                  style={{ color: '#4a5568' }}
-                >
+                <p className="text-xs font-medium mb-3" style={{ color: '#4a5568' }}>
                   {member.specialty}
                 </p>
 
-                {/* Bio */}
-                <p
-                  className="text-sm leading-relaxed mb-4"
-                  style={{ color: '#718096' }}
-                >
+                <p className="text-sm leading-relaxed mb-4" style={{ color: '#718096' }}>
                   {member.bio}
                 </p>
 
-                {/* Tags */}
                 <div className="flex flex-wrap gap-1.5">
                   {member.tags.map((tag) => (
                     <span
@@ -186,11 +161,7 @@ export default function Team() {
           ))}
         </div>
 
-        {/* Disclaimer */}
-        <p
-          className="text-center text-sm mt-10 reveal"
-          style={{ color: '#a0aec0' }}
-        >
+        <p className="text-center text-sm mt-10 reveal" style={{ color: '#a0aec0' }}>
           Nossa equipe conta com mais de 15 profissionais especializados. Conheça todos eles
           entrando em contato conosco.
         </p>
