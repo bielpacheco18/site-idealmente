@@ -2,11 +2,7 @@ import {
   Brain,
   HeartHandshake,
   Puzzle,
-  Hand,
-  MessageSquare,
   Salad,
-  Users,
-  ClipboardList,
 } from 'lucide-react'
 
 const specialties = [
@@ -20,38 +16,11 @@ const specialties = [
     bgColor: 'rgba(46, 156, 202, 0.07)',
   },
   {
-    icon: HeartHandshake,
-    title: 'Psiquiatria',
-    description:
-      'Diagnóstico e tratamento médico de transtornos mentais. Prescrição e acompanhamento farmacológico com foco no bem-estar global do paciente.',
-    tags: ['Adulto', 'Infantil', 'Medicação'],
-    color: '#1a3a5c',
-    bgColor: 'rgba(26, 58, 92, 0.07)',
-  },
-  {
     icon: Puzzle,
     title: 'Neuropsicologia',
     description:
       'Estudo da relação entre o cérebro e o comportamento. Atendimento a pacientes com lesões neurológicas, transtornos do neurodesenvolvimento e dificuldades cognitivas.',
     tags: ['Avaliação', 'Reabilitação', 'TEA/TDAH'],
-    color: '#5bc4e8',
-    bgColor: 'rgba(91, 196, 232, 0.07)',
-  },
-  {
-    icon: Hand,
-    title: 'Terapia Ocupacional',
-    description:
-      'Promoção da autonomia e participação nas atividades da vida diária. Intervenções para crianças com atrasos no desenvolvimento, adultos e idosos.',
-    tags: ['Infantil', 'Adulto', 'Integração Sensorial'],
-    color: '#2e9cca',
-    bgColor: 'rgba(46, 156, 202, 0.07)',
-  },
-  {
-    icon: MessageSquare,
-    title: 'Fonoaudiologia',
-    description:
-      'Avaliação e reabilitação dos distúrbios da comunicação humana: linguagem, fala, voz, fluência, audição e funções orofaciais.',
-    tags: ['Linguagem', 'Voz', 'Disfagia'],
     color: '#1a3a5c',
     bgColor: 'rgba(26, 58, 92, 0.07)',
   },
@@ -65,22 +34,13 @@ const specialties = [
     bgColor: 'rgba(91, 196, 232, 0.07)',
   },
   {
-    icon: Users,
-    title: 'Orientação Familiar',
+    icon: HeartHandshake,
+    title: 'Psiquiatria',
     description:
-      'Suporte e orientação para famílias que enfrentam desafios no relacionamento, na criação dos filhos, ou que possuem um familiar com transtorno mental.',
-    tags: ['Família', 'Pais', 'Cuidadores'],
+      'Diagnóstico e tratamento médico de transtornos mentais. Prescrição e acompanhamento farmacológico com foco no bem-estar global do paciente.',
+    tags: ['Adulto', 'Infantil', 'Medicação'],
     color: '#2e9cca',
     bgColor: 'rgba(46, 156, 202, 0.07)',
-  },
-  {
-    icon: ClipboardList,
-    title: 'Avaliação Neuropsicológica',
-    description:
-      'Bateria completa de testes para mapear o perfil cognitivo do paciente. Essencial para diagnósticos de TDAH, TEA, dislexia e outras condições.',
-    tags: ['TDAH', 'TEA', 'Dislexia'],
-    color: '#1a3a5c',
-    bgColor: 'rgba(26, 58, 92, 0.07)',
   },
 ]
 
@@ -113,7 +73,7 @@ export default function Specialties() {
         </div>
 
         {/* Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6 max-w-5xl mx-auto">
           {specialties.map((spec, i) => {
             const Icon = spec.icon
             return (
