@@ -36,8 +36,8 @@ const contactInfo = [
   {
     icon: Phone,
     label: 'Telefone / WhatsApp',
-    value: '(11) 99999-9999',
-    href: 'tel:+5511999999999',
+    value: '(21) 98784-1233',
+    href: 'tel:+5521987841233',
     color: '#2e9cca',
   },
   {

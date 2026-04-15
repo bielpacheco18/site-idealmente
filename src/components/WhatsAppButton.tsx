@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { X, MessageCircle } from 'lucide-react'
 
-const WHATSAPP_NUMBER = '5511999999999'
+const WHATSAPP_NUMBER = '5521987841233'
 const WHATSAPP_MESSAGE =
   'Olá! Gostaria de agendar uma consulta na IdealMente Clínica Interdisciplinar.'
 

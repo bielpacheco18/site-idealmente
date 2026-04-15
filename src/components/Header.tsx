@@ -128,13 +128,13 @@ export default function Header() {
             <div className="flex items-center gap-3">
               {/* Phone - desktop only */}
               <a
-                href="tel:+5511999999999"
+                href="tel:+5521987841233"
                 className={`hidden xl:flex items-center gap-2 text-sm font-medium transition-colors duration-200 ${
                   scrolled ? 'text-gray-500 hover:text-navy' : 'text-white/70 hover:text-white'
                 }`}
               >
                 <Phone size={15} />
-                (11) 99999-9999
+                (21) 98784-1233
               </a>
 
               <button
@@ -222,11 +222,11 @@ export default function Header() {
             {/* Footer CTA */}
             <div className="px-6 py-6 border-t border-gray-100 space-y-3">
               <a
-                href="tel:+5511999999999"
+                href="tel:+5521987841233"
                 className="flex items-center gap-3 px-4 py-3 rounded-xl bg-gray-50 text-navy font-medium"
               >
                 <Phone size={18} style={{ color: '#2e9cca' }} />
-                (11) 99999-9999
+                (21) 98784-1233
               </a>
               <button
                 onClick={() => handleNavClick('#contato')}
