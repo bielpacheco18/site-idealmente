@@ -16,7 +16,7 @@ const contactInfo = [
   {
     icon: MapPin,
     label: 'Endereço',
-    value: 'Rua das Flores, 123 — Sala 45\nJardim América, São Paulo — SP',
+    value: 'Rio de Janeiro — RJ\nBrasil',
     href: null,
     color: '#2e9cca',
     external: false,
