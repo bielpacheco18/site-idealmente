@@ -37,6 +37,17 @@ const team = [
     instagram: 'https://instagram.com/psilarissaleal_',
   },
   {
+    name: 'Isabella Wenceslau',
+    role: 'Psicóloga Clínica',
+    crp: '',
+    specialty: 'Terapia Cognitivo-Comportamental',
+    bio: 'Atua com TCC no atendimento de crianças, adolescentes e adultos. Integra recursos contemporâneos como a realidade virtual para potencializar o processo terapêutico, especialmente em ansiedade, desenvolvimento emocional e habilidades comportamentais. Conduz o paciente a compreender suas próprias dinâmicas, promovendo mudanças consistentes, autonomia e maior qualidade de vida.',
+    photo: '/isabella.jpeg',
+    initials: 'IW',
+    gradient: 'linear-gradient(135deg, #1a3a5c 0%, #2e9cca 100%)',
+    tags: ['TCC', 'Realidade Virtual', 'Ansiedade', 'Crianças', 'Adolescentes'],
+  },
+  {
     name: 'Beatriz Lobato',
     role: 'Psicóloga Clínica',
     crp: 'CRP 05/75605',
