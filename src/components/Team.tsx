@@ -36,6 +36,17 @@ const team = [
     tags: ['TCC', 'Ansiedade', 'Burnout'],
     instagram: 'https://instagram.com/psilarissaleal_',
   },
+  {
+    name: 'Beatriz Lobato',
+    role: 'Psicóloga Clínica',
+    crp: 'CRP 05/75605',
+    specialty: 'Terapia Cognitivo-Comportamental',
+    bio: 'Graduada pelo IBMR e Especialista em TCC pelo Instituto Cognitivo. Atendo adolescentes e adultos com demandas relacionadas à ansiedade, depressão, burnout e TDAH. Meu trabalho é ajudar você a compreender seus pensamentos, emoções e comportamentos, desenvolvendo estratégias práticas para lidar com o dia a dia de forma mais leve e equilibrada. Atendimento online, com escuta acolhedora e foco no seu processo terapêutico.',
+    photo: '/beatriz.jpeg',
+    initials: 'BL',
+    gradient: 'linear-gradient(135deg, #2e9cca 0%, #1a3a5c 100%)',
+    tags: ['TCC', 'Ansiedade', 'Depressão', 'Burnout', 'TDAH'],
+  },
 ]
 
 const Avatar = ({
