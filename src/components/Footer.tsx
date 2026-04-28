@@ -1,4 +1,4 @@
-import { Instagram, Phone, Mail, MapPin, Heart } from 'lucide-react'
+import { Instagram, Phone, MapPin, Heart } from 'lucide-react'
 
 const navLinks = [
   { label: 'Início', href: '#inicio' },
@@ -164,24 +164,6 @@ export default function Footer() {
                     style={{ color: 'rgba(255,255,255,0.6)' }}
                   >
                     (21) 98784-1233
-                  </span>
-                </a>
-              </li>
-              <li>
-                <a
-                  href="mailto:contato@idealmente.com.br"
-                  className="flex items-start gap-3 group"
-                >
-                  <Mail
-                    size={16}
-                    className="mt-0.5 flex-shrink-0"
-                    style={{ color: '#2e9cca' }}
-                  />
-                  <span
-                    className="text-sm group-hover:text-white transition-colors"
-                    style={{ color: 'rgba(255,255,255,0.6)' }}
-                  >
-                    contato@idealmente.com.br
                   </span>
                 </a>
               </li>
