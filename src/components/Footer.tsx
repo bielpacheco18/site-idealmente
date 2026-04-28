@@ -196,7 +196,7 @@ export default function Footer() {
                     className="text-sm"
                     style={{ color: 'rgba(255,255,255,0.6)' }}
                   >
-                    Rua das Flores, 123 — Sala 45{'\n'}Jardim América, São Paulo — SP
+                    Rio de Janeiro — RJ{'\n'}Brasil
                   </span>
                 </div>
               </li>
