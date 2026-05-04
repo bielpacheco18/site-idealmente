@@ -64,11 +64,18 @@ export default function About() {
               especialidades da saúde mental que trabalham de forma coordenada e
               integrada.
             </p>
-            <p className="text-base sm:text-lg leading-relaxed" style={{ color: '#4a5568' }}>
+            <p className="text-base sm:text-lg leading-relaxed mb-5" style={{ color: '#4a5568' }}>
               Acreditamos que a saúde mental é um direito, não um privilégio. Por
               isso, criamos um espaço onde cada paciente é acolhido com
               individualidade, onde os tratamentos são pensados de forma
               personalizada e onde a família é sempre parte do processo.
+            </p>
+            <p className="text-base sm:text-lg leading-relaxed" style={{ color: '#4a5568' }}>
+              Nosso objetivo é tornar o cuidado psicológico acessível a todas as
+              classes sociais. Por isso, oferecemos diferentes modalidades de
+              atendimento — do Social ao Premium — para que cada pessoa encontre
+              o formato que melhor se adapta à sua realidade, sem abrir mão da
+              qualidade e da ética que nos definem.
             </p>
           </div>
 
