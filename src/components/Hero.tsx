@@ -1,5 +1,10 @@
 import { ChevronDown, Calendar, Stethoscope, Shield, Heart, Users } from 'lucide-react'
 
+const WHATSAPP_NUMBER = '5511999999999'
+const WHATSAPP_MESSAGE =
+  'Olá! Gostaria de agendar uma consulta na IdealMente Clínica Interdisciplinar.'
+const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`
+
 const stats = [
   { value: '2.500+', label: 'Pacientes Atendidos', icon: Users },
   { value: '15+', label: 'Profissionais', icon: Stethoscope },
@@ -89,8 +94,10 @@ export default function Hero() {
 
             {/* CTA buttons */}
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
-              <button
-                onClick={() => handleScroll('#contato')}
+              <a
+                href={WHATSAPP_URL}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2.5 px-6 py-3.5 sm:px-7 sm:py-4 rounded-full text-sm sm:text-base font-semibold text-white transition-all duration-300 hover:shadow-xl hover:-translate-y-1 active:translate-y-0"
                 style={{
                   backgroundColor: '#2e9cca',
@@ -99,7 +106,7 @@ export default function Hero() {
               >
                 <Calendar size={18} />
                 Agendar Consulta
-              </button>
+              </a>
               <button
                 onClick={() => handleScroll('#especialidades')}
                 className="inline-flex items-center justify-center gap-2.5 px-6 py-3.5 sm:px-7 sm:py-4 rounded-full text-sm sm:text-base font-semibold text-white transition-all duration-300 border border-white/30 hover:bg-white/10 hover:-translate-y-1"

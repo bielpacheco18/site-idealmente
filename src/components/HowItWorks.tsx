@@ -159,12 +159,10 @@ export default function HowItWorks() {
             >
               Pronto para começar sua jornada de bem-estar?
             </p>
-            <button
-              onClick={() => {
-                document
-                  .getElementById('contato')
-                  ?.scrollIntoView({ behavior: 'smooth' })
-              }}
+            <a
+              href="https://wa.me/5511999999999?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20consulta%20na%20IdealMente%20Cl%C3%ADnica%20Interdisciplinar."
+              target="_blank"
+              rel="noopener noreferrer"
               className="flex-shrink-0 px-6 py-3 rounded-full text-sm font-semibold text-white transition-all duration-200 hover:shadow-xl hover:-translate-y-0.5"
               style={{
                 background: 'linear-gradient(135deg, #2e9cca, #5bc4e8)',
@@ -172,7 +170,7 @@ export default function HowItWorks() {
               }}
             >
               Agendar Minha Primeira Consulta
-            </button>
+            </a>
           </div>
         </div>
       </div>

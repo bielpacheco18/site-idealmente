@@ -142,17 +142,15 @@ export default function Specialties() {
             Não encontrou o que procura? Entre em contato — podemos ajudá-lo a
             encontrar o cuidado ideal.
           </p>
-          <button
-            onClick={() => {
-              document
-                .getElementById('contato')
-                ?.scrollIntoView({ behavior: 'smooth' })
-            }}
+          <a
+            href="https://wa.me/5511999999999?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20consulta%20na%20IdealMente%20Cl%C3%ADnica%20Interdisciplinar."
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full text-sm font-semibold text-white transition-all duration-200 hover:shadow-lg hover:-translate-y-0.5"
             style={{ backgroundColor: '#2e9cca' }}
           >
             Fale com nossa equipe
-          </button>
+          </a>
         </div>
       </div>
     </section>

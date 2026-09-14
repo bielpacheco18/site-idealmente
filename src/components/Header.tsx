@@ -1,6 +1,11 @@
 import { useState, useEffect } from 'react'
 import { Menu, X, Phone } from 'lucide-react'
 
+const WHATSAPP_NUMBER = '5511999999999'
+const WHATSAPP_MESSAGE =
+  'Olá! Gostaria de agendar uma consulta na IdealMente Clínica Interdisciplinar.'
+const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`
+
 const navLinks = [
   { label: 'Início', href: '#inicio' },
   { label: 'Sobre', href: '#sobre' },
@@ -137,13 +142,15 @@ export default function Header() {
                 (21) 98784-1233
               </a>
 
-              <button
-                onClick={() => handleNavClick('#contato')}
+              <a
+                href={WHATSAPP_URL}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="hidden lg:inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-semibold text-white transition-all duration-200 hover:shadow-lg hover:shadow-accent/30 hover:-translate-y-0.5 active:translate-y-0"
                 style={{ backgroundColor: '#2e9cca' }}
               >
                 Agendar Consulta
-              </button>
+              </a>
 
               {/* Mobile hamburger */}
               <button
@@ -228,13 +235,15 @@ export default function Header() {
                 <Phone size={18} style={{ color: '#2e9cca' }} />
                 (21) 98784-1233
               </a>
-              <button
-                onClick={() => handleNavClick('#contato')}
-                className="w-full py-3 rounded-xl text-white font-semibold text-base transition-all duration-200 hover:shadow-lg"
+              <a
+                href={WHATSAPP_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full flex items-center justify-center py-3 rounded-xl text-white font-semibold text-base transition-all duration-200 hover:shadow-lg"
                 style={{ backgroundColor: '#2e9cca' }}
               >
                 Agendar Consulta
-              </button>
+              </a>
             </div>
           </div>
         </div>

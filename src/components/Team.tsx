@@ -58,15 +58,29 @@ const team = [
     gradient: 'linear-gradient(135deg, #2e9cca 0%, #1a3a5c 100%)',
     tags: ['TCC', 'Ansiedade', 'Depressão', 'Burnout', 'TDAH'],
   },
+  {
+    name: 'Raquel Bandeira Sandy da Silva',
+    role: 'Psicóloga | Terapeuta em Dependência Química',
+    crp: '',
+    specialty: 'Dependência Química',
+    bio: 'Atua no acompanhamento psicológico de pessoas que enfrentam questões relacionadas à dependência química, oferecendo um espaço de escuta, acolhimento e cuidado individualizado. Seu trabalho busca auxiliar cada paciente na compreensão de sua trajetória e no desenvolvimento de estratégias para uma vida mais saudável e equilibrada.',
+    photo: '/raquel.jpeg',
+    photoPosition: 'top',
+    initials: 'RS',
+    gradient: 'linear-gradient(135deg, #2e9cca 0%, #1a3a5c 100%)',
+    tags: ['Dependência Química', 'Acolhimento'],
+  },
 ]
 
 const Avatar = ({
   photo,
+  photoPosition,
   initials,
   gradient,
   name,
 }: {
   photo?: string
+  photoPosition?: string
   initials: string
   gradient: string
   name: string
@@ -76,6 +90,7 @@ const Avatar = ({
       <img
         src={photo}
         alt={name}
+        style={{ objectPosition: photoPosition ?? 'center' }}
         className="w-24 h-24 rounded-2xl object-cover flex-shrink-0 shadow-lg"
       />
     )
@@ -134,6 +149,7 @@ export default function Team() {
                 <div className="flex items-start justify-between mb-5">
                   <Avatar
                     photo={member.photo}
+                    photoPosition={member.photoPosition}
                     initials={member.initials}
                     gradient={member.gradient}
                     name={member.name}
